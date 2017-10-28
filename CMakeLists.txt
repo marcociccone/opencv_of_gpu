@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( of_gpu )
+set(CMAKE_CXX_STANDARD 11)
+find_package( OpenCV REQUIRED )
+add_executable( of_gpu of_gpu.cpp )
+target_link_libraries( of_gpu cnpy z ${OpenCV_LIBS} )
